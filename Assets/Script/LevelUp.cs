@@ -25,7 +25,7 @@ public class LevelUp : MonoBehaviour
     //レベルアップできるか判定 (クッキーが増えたときに実行)
     public void LevelButtonInteractable()
     {
-        if (GlobalValue.cookieRequired < GlobalValue.cookie)
+        if (GlobalValue.cookieRequired <= GlobalValue.cookie)
         {
             levelButton.interactable = true;
         }

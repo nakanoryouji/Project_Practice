@@ -13,4 +13,8 @@ public static class GlobalValue
     
     //レベル
     public static int level = 1;
+
+    //フィーバーまでのカウント
+    public static int feverCount = 0;
+    public static bool feverFlag = false;
 }

@@ -7,7 +7,7 @@ public class CookieClick : MonoBehaviour
 {
     public CookieQuantity cookieQuantity;
     public LevelUp levelUp;
-
+    
     double delay;
 
     // Update is called once per frame
@@ -22,10 +22,14 @@ public class CookieClick : MonoBehaviour
     //クッキーボタンをクリックしたときに実行
     public void CookieClickOnButton()
     {
-        //レベルに応じて増えるクッキーの数を上昇
-        for (int i = 0; i < GlobalValue.level;i++)
+        if (GlobalValue.feverFlag)
         {
-            GlobalValue.cookie++;
+            GlobalValue.cookie += GlobalValue.level * 100;
+
+        }
+        else
+        {
+            GlobalValue.cookie += GlobalValue.level;
         }
         
         //文字表記を変える
@@ -40,7 +44,7 @@ public class CookieClick : MonoBehaviour
     {
         delay += Time.deltaTime;
 
-        if (delay > 0.5)
+        if (delay > 0.2)
         {
             delay = 0.0f;
             GlobalValue.cookie += GlobalValue.level - 5;
