@@ -8,6 +8,8 @@ branch名 ： 自分で作ったbranchの名前を入力
 
 ・GitHub ブランチ更新コマンド
 
+git fetch
+
 git add -A
 
 git commit -m "コメント文"
